@@ -3,7 +3,6 @@
 import { Particles } from "@/components/magicui/particles";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
-import { MagicCardDemo } from "../magic-card/magic-card";
 import { AnimatedGradientTextDemo } from "../animated-text/animated-text";
 import Link from "next/link";
 
