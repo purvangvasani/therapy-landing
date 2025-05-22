@@ -17,8 +17,9 @@ const features = [
     href: "/",
     cta: "Learn more",
     background: <Image 
-      src=""
+      src={'/arjun_mehta_full.png'}
       alt="" 
+      fill
       className="absolute -right-20 -top-20 opacity-60" />,
     className: "lg:row-start-1 lg:row-end-4 lg:col-start-2 lg:col-end-3",
   },
@@ -28,8 +29,10 @@ const features = [
     description: "Search through all your files in one place.",
     href: "/",
     cta: "Learn more",
-    background: <Image src=""
-      alt="" className="absolute -right-20 -top-20 opacity-60" />,
+    background: <Image 
+      src={'/arjun_mehta_full.png'}
+      alt="" 
+      fill className="absolute -right-20 -top-20 opacity-60" />,
     className: "lg:col-start-1 lg:col-end-2 lg:row-start-1 lg:row-end-3",
   },
   {
@@ -38,8 +41,10 @@ const features = [
     description: "Supports 100+ languages and counting.",
     href: "/",
     cta: "Learn more",
-    background: <Image src=""
-      alt=""  className="absolute -right-20 -top-20 opacity-60" />,
+    background: <Image 
+      src={'/arjun_mehta_full.png'}
+      alt="" 
+      fill className="absolute -right-20 -top-20 opacity-60" />,
     className: "lg:col-start-1 lg:col-end-2 lg:row-start-3 lg:row-end-4",
   },
   {
@@ -48,8 +53,10 @@ const features = [
     description: "Use the calendar to filter your files by date.",
     href: "/",
     cta: "Learn more",
-    background: <Image src=""
-      alt=""  className="absolute -right-20 -top-20 opacity-60" />,
+    background: <Image 
+      src={'/arjun_mehta_full.png'}
+      alt="" 
+      fill className="absolute -right-20 -top-20 opacity-60" />,
     className: "lg:col-start-3 lg:col-end-3 lg:row-start-1 lg:row-end-2",
   },
   {
@@ -59,8 +66,10 @@ const features = [
       "Get notified when someone shares a file or mentions you in a comment.",
     href: "/",
     cta: "Learn more",
-    background: <Image src=""
-      alt=""  className="absolute -right-20 -top-20 opacity-60" />,
+    background: <Image 
+      src={'/arjun_mehta_full.png'}
+      alt="" 
+      fill className="absolute -right-20 -top-20 opacity-60" />,
     className: "lg:col-start-3 lg:col-end-3 lg:row-start-2 lg:row-end-4",
   },
 ];
@@ -73,7 +82,7 @@ export function BentoDemo() {
       </span>
       <BentoGrid className="lg:grid-rows-3">
         {features.map((feature) => (
-          <BentoCard key={feature.name} {...feature} />
+          <BentoCard key={feature.name} {...feature} background={feature.background} />
         ))}
       </BentoGrid>
     </>

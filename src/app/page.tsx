@@ -2,6 +2,7 @@ import { Separator } from "@/components/ui/separator";
 import { BentoDemo } from "./bento-grid/bento-grid";
 import { ParticlesDemo } from "./hero-section-particles/hero-particle";
 import { MarqueeDemo } from "./marquee/marquee";
+import { AnimatedTestimonialsDemo } from "./bento-grid/testimonial";
 
 export default function Home() {
   return (
@@ -9,7 +10,8 @@ export default function Home() {
       <ParticlesDemo />
       <MarqueeDemo />
       <Separator />
-      <BentoDemo />
+      <AnimatedTestimonialsDemo />
+      {/* <BentoDemo /> */}
     </div>
   );
 }
