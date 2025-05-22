@@ -10,12 +10,16 @@
 !.yarn/releases
 !.yarn/versions
 
-# testing
-/coverage
+# package lock file
+package-lock.json
+pnpm-lock.yaml
 
 # next.js
 /.next/
 /out/
+
+# testing
+/coverage
 
 # production
 /build
