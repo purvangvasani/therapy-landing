@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { DockDemo } from "./dock-navigation/dock-nav";
-import { GitHubLogoIcon, TwitterLogoIcon, LinkedInLogoIcon, DiscordLogoIcon } from "@radix-ui/react-icons";
+// import { GitHubLogoIcon, TwitterLogoIcon, LinkedInLogoIcon, DiscordLogoIcon } from "@radix-ui/react-icons";
 import Link from "next/link";
 
 const geistSans = Geist({
