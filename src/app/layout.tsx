@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Therapy.ai",
+  title: "MyTherapy.in",
   description: "Ai Powered Therapy app.",
 };
 
@@ -33,15 +33,15 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <footer className="footer bg-base-200/60 px-6 py-4">
           <div className="flex w-full flex-wrap items-center justify-between">
             
-            <aside className="grid-flow-col items-center">
-              <p> ©2025 <Link className="link link-hover font-medium" href="/">Therapy.ai</Link> </p>
+            <aside className="grid-flow-col items-center justify-center">
+              <p> ©2025 <Link className="link link-hover font-medium" href="/">MyTherapy.in</Link> </p>
             </aside>
-            <div className="flex h-5 gap-4">
+            {/* <div className="flex h-5 gap-4">
               <GitHubLogoIcon className="size-5" />
               <TwitterLogoIcon className="size-5" />
               <LinkedInLogoIcon className="size-5" />
               <DiscordLogoIcon className="size-5" />
-            </div>
+            </div> */}
           </div>
         </footer>
       </body>

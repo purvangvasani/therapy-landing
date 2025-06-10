@@ -61,31 +61,31 @@ const Icons = {
 
 const DATA = {
     navbar: [
-        { href: "/", icon: HomeIcon, label: "Therapy.ai" },
+        { href: "/", icon: HomeIcon, label: "MyTherapy.in" },
         // { href: "#", icon: PencilIcon, label: "Blog" },
     ],
     contact: {
         social: {
             "Explore": {
                 name: "Explore",
-                url: "/",
+                url: "https://therapy-ai-a6go.vercel.app/",
                 icon: Icons.armchair,
             },
-            "Privacy Policy": {
-                name: "Privacy Policy",
-                url: "/",
-                icon: Icons.keyRound,
-            },
-            "Terms & Conditions": {
-                name: "Terms & Conditions",
-                url: "/",
-                icon: Icons.scrollText,
-            },
-            "Contact Us": {
-                name: "Send Email",
-                url: "#",
-                icon: Icons.email,
-            },
+            // "Privacy Policy": {
+            //     name: "Privacy Policy",
+            //     url: "/privacy",
+            //     icon: Icons.keyRound,
+            // },
+            // "Terms & Conditions": {
+            //     name: "Terms & Conditions",
+            //     url: "/",
+            //     icon: Icons.scrollText,
+            // },
+            // "Contact Us": {
+            //     name: "Send Email",
+            //     url: "#",
+            //     icon: Icons.email,
+            // },
         },
     },
 };
