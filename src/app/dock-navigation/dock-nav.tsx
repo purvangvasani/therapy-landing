@@ -61,14 +61,14 @@ const Icons = {
 
 const DATA = {
     navbar: [
-        { href: "/", icon: HomeIcon, label: "MyTherapy.in" },
+        { href: "/", icon: HomeIcon, label: "MyTherapy.co.in" },
         // { href: "#", icon: PencilIcon, label: "Blog" },
     ],
     contact: {
         social: {
             "Explore": {
                 name: "Explore",
-                url: "https://therapy-ai-a6go.vercel.app/",
+                url: "https://app.mytherapy.co.in/",
                 icon: Icons.armchair,
             },
             // "Privacy Policy": {

@@ -8,7 +8,7 @@ export default function Privacy() {
     return (
         <div className="flex h-[70svh] w-full items-center justify-center bg-background p-4">
             <Terminal>
-                <TypingAnimation>&gt; Privacy Policy | MyTherapy.in </TypingAnimation>
+                <TypingAnimation>&gt; Privacy Policy | MyTherapy.co.in </TypingAnimation>
 
                 <AnimatedSpan delay={1500} className="text-gray-500">
                     <span>✔ Preflight checks.</span>
