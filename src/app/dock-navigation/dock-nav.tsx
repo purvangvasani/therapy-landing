@@ -125,6 +125,7 @@ export function DockDemo() {
                                         <Link
                                             href={social.url}
                                             aria-label={social.name}
+                                            target={social.name === 'Explore' ? "_blank" : "_self"}
                                             className={cn(
                                                 buttonVariants({ variant: "ghost", size: "icon" }),
                                                 "size-12 rounded-full",
