@@ -1,61 +1,48 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
 import {
     Card,
-    CardContent,
-    CardFooter,
 } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { Textarea } from "@/components/ui/textarea";
 import { ShineBorder } from "@/components/magicui/shine-border";
 import { useTheme } from "next-themes";
-import { useForm } from "react-hook-form";
-import { z } from "zod";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { toast } from "sonner";
 import { Mail } from 'lucide-react';
 
-const formSchema = z.object({
-    name: z.string().min(2, {
-        message: "Name must be at least 2 characters.",
-    }),
-    email: z.string().email({
-        message: "Please enter a valid email address.",
-    }),
-    subject: z.string().min(5, {
-        message: "Subject must be at least 5 characters.",
-    }),
-    description: z.string().min(10, {
-        message: "Description must be at least 10 characters.",
-    }),
-});
+// const formSchema = z.object({
+//     name: z.string().min(2, {
+//         message: "Name must be at least 2 characters.",
+//     }),
+//     email: z.string().email({
+//         message: "Please enter a valid email address.",
+//     }),
+//     subject: z.string().min(5, {
+//         message: "Subject must be at least 5 characters.",
+//     }),
+//     description: z.string().min(10, {
+//         message: "Description must be at least 10 characters.",
+//     }),
+// });
 
-type FormValues = z.infer<typeof formSchema>;
+// type FormValues = z.infer<typeof formSchema>;
 
 export function ShineBorderDemo2() {
     const theme = useTheme();
-    const {
-        register,
-        handleSubmit,
-        formState: { errors, isSubmitting },
-        reset,
-    } = useForm<FormValues>({
-        resolver: zodResolver(formSchema),
-    });
+    // const {
+    //     reset,
+    // } = useForm<FormValues>({
+    //     resolver: zodResolver(formSchema),
+    // });
 
-    const onSubmit = async (data: FormValues) => {
-        try {
-            // Here you would typically send the data to your API
-            console.log('Form submitted:', data);
-            toast.success('Message sent successfully!');
-            reset();
-        } catch (error) {
-            console.error('Error submitting form:', error);
-            toast.error('Failed to send message. Please try again.');
-        }
-    };
+    // const onSubmit = async (data: FormValues) => {
+    //     try {
+    //         // Here you would typically send the data to your API
+    //         console.log('Form submitted:', data);
+    //         toast.success('Message sent successfully!');
+    //         reset();
+    //     } catch (error) {
+    //         console.error('Error submitting form:', error);
+    //         toast.error('Failed to send message. Please try again.');
+    //     }
+    // };
 
     return (
         <div className="w-full px-4 sm:px-6 lg:px-8">
