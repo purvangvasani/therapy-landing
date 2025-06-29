@@ -65,9 +65,9 @@ export function ShineBorderDemo2() {
                 </span>
             </div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12  mx-auto sm:px-6 lg:px-8">
+            <div className="grid grid-cols-1 lg:grid-cols-1 gap-6 lg:gap-12  mx-auto sm:px-6 lg:px-8">
                 {/* Contact Form */}
-                <Card className="relative overflow-hidden h-full w-full border-0 sm:border shadow-none sm:shadow">
+                {/* <Card className="relative overflow-hidden h-full w-full border-0 sm:border shadow-none sm:shadow">
                     <ShineBorder shineColor={theme.theme === "dark" ? "white" : "black"} />
                     <form onSubmit={handleSubmit(onSubmit)}>
                         <CardContent className="space-y-6 pt-8 px-6 sm:px-8">
@@ -130,17 +130,16 @@ export function ShineBorderDemo2() {
                             </Button>
                         </CardFooter>
                     </form>
-                </Card>
+                </Card> */}
 
                 {/* Contact Information */}
                 <div className="space-y-4 sm:space-y-6">
-                    <Card className="relative overflow-hidden h-full p-4 sm:p-6 border-0 sm:border shadow-none sm:shadow">
+                    <Card className="relative h-full w-full p-4 sm:p-6 border-0 sm:border shadow-none sm:shadow">
                         <ShineBorder shineColor={theme.theme === "dark" ? "white" : "black"} />
                         <div className="space-y-4 sm:space-y-6">
                             <h3 className="text-2xl font-bold text-foreground">Get in Touch</h3>
                             <p className="text-muted-foreground">
-                                Have questions, feedback, or just want to say hello? <br />
-                                We’re always here to listen — just like our app.
+                                Have questions, feedback, or just want to say hello?  We’re always here to listen — just like our app.
                             </p>
 
                             <div className="space-y-4 sm:space-y-6 pt-2 sm:pt-4">
