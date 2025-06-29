@@ -5,6 +5,8 @@ import { DockDemo } from "./dock-navigation/dock-nav";
 // import { GitHubLogoIcon, TwitterLogoIcon, LinkedInLogoIcon, DiscordLogoIcon } from "@radix-ui/react-icons";
 import Link from "next/link";
 import GoogleTag from "./GoogleTag";
+// import AIBotTag from "./AIBotTag";
+import ChatWidget from "../../components/ChatWidget";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -31,6 +33,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <main>
           {children}
           <GoogleTag />
+          <ChatWidget />
         </main>
         <footer className="footer bg-base-200/60 px-6 py-4">
           <div className="flex w-full flex-wrap items-center justify-between">
@@ -45,6 +48,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               <DiscordLogoIcon className="size-5" />
             </div> */}
           </div>
+          {/* <AIBotTag /> */}
         </footer>
       </body>
     </html>

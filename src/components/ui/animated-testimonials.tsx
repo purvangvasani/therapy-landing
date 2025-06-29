@@ -1,9 +1,9 @@
 "use client";
 
 import { IconArrowLeft, IconArrowRight } from "@tabler/icons-react";
-import { motion, AnimatePresence } from "motion/react";
-
+import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
+import dynamic from "next/dynamic";
 
 type Testimonial = {
   quote: string;
@@ -32,46 +32,63 @@ export const AnimatedTestimonials = ({
     return index === active;
   };
 
+  // Use effect for autoplay
   useEffect(() => {
+    if (typeof window === 'undefined') return; // Don't run on server
+    
     if (autoplay) {
       const interval = setInterval(handleNext, 5000);
       return () => clearInterval(interval);
     }
-  }, [autoplay]);
+  }, [autoplay, active]); // Add active to dependencies
 
   const randomRotateY = () => {
     return Math.floor(Math.random() * 21) - 10;
   };
+  // Only render on client to prevent hydration mismatch
+  const [isMounted, setIsMounted] = useState(false);
+  
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  if (!isMounted) {
+    return (
+      <div className="mx-auto max-w-sm px-4 py-20 font-sans antialiased md:max-w-4xl md:px-8 lg:px-12">
+        <div className="relative grid grid-cols-1 gap-20 md:grid-cols-2">
+          <div className="relative h-120 w-full">
+            <div className="h-full w-full rounded-3xl bg-gray-100 dark:bg-gray-800" />
+          </div>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="mx-auto max-w-sm px-4 py-20 font-sans antialiased md:max-w-4xl md:px-8 lg:px-12">
       <div className="relative grid grid-cols-1 gap-20 md:grid-cols-2">
         <div>
           <div className="relative h-120 w-full">
-            <AnimatePresence>
+            <AnimatePresence mode="wait">
               {testimonials.map((testimonial, index) => (
                 <motion.div
                   key={testimonial.src}
                   initial={{
                     opacity: 0,
                     scale: 0.9,
-                    z: -100,
-                    rotate: randomRotateY(),
+                    rotate: 0,
                   }}
                   animate={{
                     opacity: isActive(index) ? 1 : 0.7,
                     scale: isActive(index) ? 1 : 0.95,
-                    z: isActive(index) ? 0 : -100,
-                    rotate: isActive(index) ? 0 : randomRotateY(),
-                    zIndex: isActive(index)
-                      ? 40
-                      : testimonials.length + 2 - index,
-                    y: isActive(index) ? [0, -80, 0] : 0,
+                    rotate: isActive(index) ? 0 : 0,
+                    zIndex: isActive(index) ? 40 : testimonials.length + 2 - index,
+                    y: isActive(index) ? 0 : 0,
                   }}
                   exit={{
                     opacity: 0,
                     scale: 0.9,
-                    z: 100,
-                    rotate: randomRotateY(),
+                    rotate: 0,
                   }}
                   transition={{
                     duration: 0.4,

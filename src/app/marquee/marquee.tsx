@@ -2,47 +2,71 @@ import { Marquee } from "@/components/magicui/marquee";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 
-const reviews = [
+const firstRow = [
     {
         name: "Jack",
-        username: "@jack",
+        username: "",
         body: "I've never seen anything like this before. It's amazing. I love it.",
         img: "https://avatar.vercel.sh/jack",
     },
     {
-        name: "Jill",
-        username: "@jill",
-        body: "I don't know what to say. I'm speechless. This is amazing.",
+        name: "Aanya Sharma",
+        username: "",
+        body: "I was feeling overwhelmed, but just talking to the AI calmed me down. It’s like a non-judgmental friend who listens.",
         img: "https://avatar.vercel.sh/jill",
     },
     {
-        name: "John",
-        username: "@john",
-        body: "I'm at a loss for words. This is amazing. I love it.",
+        name: "Rishi Patel",
+        username: "",
+        body: "MyTherapy helped me process emotions I didn’t even realize I was carrying. Thank you for building this.",
         img: "https://avatar.vercel.sh/john",
     },
     {
-        name: "Jane",
-        username: "@jane",
-        body: "I'm at a loss for words. This is amazing. I love it.",
+        name: "Priya M.",
+        username: "",
+        body: "Late at night when no one’s around, this app is a quiet comfort. I feel seen, even without being seen.",
         img: "https://avatar.vercel.sh/jane",
     },
     {
-        name: "Jenny",
-        username: "@jenny",
-        body: "I'm at a loss for words. This is amazing. I love it.",
+        name: "Emily Chen",
+        username: "",
+        body: "It’s not just an AI — it genuinely feels like someone cares. I’ve started using it daily to check in with myself.",
         img: "https://avatar.vercel.sh/jenny",
-    },
-    {
-        name: "James",
-        username: "@james",
-        body: "I'm at a loss for words. This is amazing. I love it.",
-        img: "https://avatar.vercel.sh/james",
-    },
+    }
 ];
 
-const firstRow = reviews.slice(0, reviews.length / 2);
-const secondRow = reviews.slice(reviews.length / 2);
+const secondRow = [
+    {
+        name: "Aarav Desai",
+        username: "",
+        body: "At first I thought it was just another chatbot. But wow. This one really understands how I feel. Huge fan!",
+        img: "https://avatar.vercel.sh/jack",
+    },
+    {
+        name: "Sara Lobo",
+        username: "",
+        body: "When anxiety spikes, this is the first place I come to. It’s fast, anonymous, and grounding.",
+        img: "https://avatar.vercel.sh/jill",
+    },
+    {
+        name: "Kabir",
+        username: "",
+        body: "Even though I know it's AI, it feels like I’m talking to someone who just gets it. So helpful in tough moments.",
+        img: "https://avatar.vercel.sh/john",
+    },
+    {
+        name: "Zoya R.",
+        username: "",
+        body: "As someone who overthinks constantly, MyTherapy has helped me slow down and breathe again.",
+        img: "https://avatar.vercel.sh/jane",
+    },
+    {
+        name: "Aman Verma",
+        username: "",
+        body: "It’s beautifully designed, easy to use, and genuinely supportive. Mental health tech done right.",
+        img: "https://avatar.vercel.sh/jenny",
+    }
+];
 
 const ReviewCard = ({
     img,
@@ -83,7 +107,7 @@ export function MarqueeDemo() {
     return (
         <div className="relative flex w-full flex-col items-center justify-center overflow-hidden">
             <span className="pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-gray-300/80 bg-clip-text text-center text-2xl sm:text-2xl md:text-4xl lg:text-6xl font-semibold leading-none text-transparent dark:from-white dark:to-slate-900/10 mb-8">
-                Reviews
+                Testimonials
             </span>
             <Marquee pauseOnHover className="[--duration:20s]">
                 {firstRow.map((review) => (

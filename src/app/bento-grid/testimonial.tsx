@@ -38,5 +38,12 @@ export function AnimatedTestimonialsDemo() {
       src: "leela_sharma_full.png",
     },
   ];
-  return <AnimatedTestimonials testimonials={testimonials} />;
+  return (
+    <div className="relative flex w-full flex-col items-center justify-center overflow-hidden">
+      <span className="pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-gray-300/80 bg-clip-text text-center text-2xl sm:text-2xl md:text-4xl lg:text-6xl font-semibold leading-none text-transparent dark:from-white dark:to-slate-900/10">
+        Meet Our Therapists
+      </span>
+      <AnimatedTestimonials testimonials={testimonials} />
+    </div>
+  );
 }

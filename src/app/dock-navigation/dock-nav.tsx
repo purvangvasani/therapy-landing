@@ -1,6 +1,6 @@
 "use client";
 
-import { Armchair, CalendarIcon, HomeIcon, KeyRound, MailIcon, ScrollText } from "lucide-react";
+import { Armchair, CalendarIcon, HomeIcon, KeyRound, MailIcon, ScrollText, MessageCircleQuestionIcon } from "lucide-react";
 import Link from "next/link";
 import React from "react";
 
@@ -17,6 +17,7 @@ const Icons = {
     email: (props: IconProps) => <MailIcon {...props} />,
     armchair: (props: IconProps) => <Armchair {...props} />,
     keyRound: (props: IconProps) => <KeyRound {...props} />,
+    faq: (props: IconProps) => <MessageCircleQuestionIcon {...props} />,
     scrollText: (props: IconProps) => <ScrollText {...props} />,
     linkedin: (props: IconProps) => (
         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" {...props}>
@@ -71,11 +72,16 @@ const DATA = {
                 url: "https://app.mytherapy.co.in/",
                 icon: Icons.armchair,
             },
-            // "Privacy Policy": {
-            //     name: "Privacy Policy",
-            //     url: "/privacy",
-            //     icon: Icons.keyRound,
-            // },
+            "Privacy Policy": {
+                name: "Privacy Policy",
+                url: "/privacy",
+                icon: Icons.keyRound,
+            },
+            "FAQs": {
+                name: "FAQs",
+                url: "/faq",
+                icon: Icons.faq,
+            },
             // "Terms & Conditions": {
             //     name: "Terms & Conditions",
             //     url: "/",
