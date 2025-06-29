@@ -4,14 +4,8 @@ import { MarqueeDemo } from "./marquee/marquee";
 import { AnimatedTestimonialsDemo } from "./bento-grid/testimonial";
 import { AnimatedListDemo } from "./services/OurServices";
 import { ShineBorderDemo2 } from "./contact/ContactUs";
-import dynamic from 'next/dynamic';
 import WhatWeAre from "./what-we-are/WhatWeAre";
 import WhatWeDo from "./what-we-do/WhatWeDo";
-
-// const WhatWeAre = dynamic(
-//   () => import('./what-we-are/WhatWeAre').then((mod) => mod.default),
-//   { ssr: false }
-// ) as React.ComponentType;
 
 export default function Home() {
   return (

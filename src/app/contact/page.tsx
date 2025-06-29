@@ -58,7 +58,7 @@ export default function ContactPage() {
                     info.mytherapy.in@gmail.com
                   </a>
                   <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">
-                    For general queries, technical support, or anything else you'd like to share.
+                    For general queries, technical support, or anything else you&apos;d like to share.
                   </p>
                 </div>
               </div>

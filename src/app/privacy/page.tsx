@@ -112,7 +112,7 @@ export default function Privacy() {
                         </CardHeader>
                         <CardContent>
                             <div className="bg-muted/30 p-6 rounded-lg text-center">
-                                <p className="mb-4">We're here to help answer any questions you might have.</p>
+                                <p className="mb-4">We&apos;re here to help answer any questions you might have.</p>
                                 <a 
                                     href="mailto:info@mytherapy.co.in" 
                                     className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-primary hover:bg-primary/90 transition-colors"

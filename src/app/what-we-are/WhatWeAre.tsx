@@ -21,7 +21,7 @@ const WhatWeAre: React.FC = () => {
                     <h3 className="text-2xl font-semibold text-gray-800 dark:text-white mb-6">We are here for:</h3>
                     <ul className="space-y-4 text-lg text-gray-600 dark:text-gray-300">
                         <li className="flex items-center justify-center gap-2">
-                            <span className="text-purple-500">•</span> The overthinkers who can't switch off
+                            <span className="text-purple-500">•</span> The overthinkers who can&apos;t switch off
                         </li>
                         <li className="flex items-center justify-center gap-2">
                             <span className="text-purple-500">•</span> The strong ones who never ask for help
@@ -33,7 +33,7 @@ const WhatWeAre: React.FC = () => {
                 </div>
 
                 <p className="text-lg text-gray-600 dark:text-gray-300 mb-12">
-                    Whether you're struggling with anxiety, burnout, grief, or just need a judgment-free space to breathe — we're here.
+                    Whether you&apos;re struggling with anxiety, burnout, grief, or just need a judgment-free space to breathe — we&apos;re here.
                 </p>
 
                 {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
@@ -61,7 +61,7 @@ const WhatWeAre: React.FC = () => {
 
                 <div className="bg-purple-50 dark:bg-purple-900/20 p-6 rounded-xl border border-purple-100 dark:border-purple-900/50">
                     <p className="text-lg text-gray-700 dark:text-gray-200 font-medium">
-                        We don't replace human care. We make it more accessible — for everyone.
+                        We don&apos;t replace human care. We make it more accessible — for everyone.
                     </p>
                 </div>
             </div>

@@ -3,7 +3,6 @@
 import { IconArrowLeft, IconArrowRight } from "@tabler/icons-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
-import dynamic from "next/dynamic";
 
 type Testimonial = {
   quote: string;
@@ -42,9 +41,9 @@ export const AnimatedTestimonials = ({
     }
   }, [autoplay, active]); // Add active to dependencies
 
-  const randomRotateY = () => {
-    return Math.floor(Math.random() * 21) - 10;
-  };
+  // const randomRotateY = () => {
+  //   return Math.floor(Math.random() * 21) - 10;
+  // };
   // Only render on client to prevent hydration mismatch
   const [isMounted, setIsMounted] = useState(false);
   

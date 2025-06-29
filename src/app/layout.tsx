@@ -2,10 +2,8 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { DockDemo } from "./dock-navigation/dock-nav";
-// import { GitHubLogoIcon, TwitterLogoIcon, LinkedInLogoIcon, DiscordLogoIcon } from "@radix-ui/react-icons";
 import Link from "next/link";
 import GoogleTag from "./GoogleTag";
-// import AIBotTag from "./AIBotTag";
 import ChatWidget from "../../components/ChatWidget";
 
 const geistSans = Geist({
@@ -48,7 +46,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               <DiscordLogoIcon className="size-5" />
             </div> */}
           </div>
-          {/* <AIBotTag /> */}
         </footer>
       </body>
     </html>
