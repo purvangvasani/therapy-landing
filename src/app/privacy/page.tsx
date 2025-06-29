@@ -5,18 +5,18 @@ export default function Privacy() {
         <div className="min-h-screen bg-gradient-to-b from-background to-muted/20 py-12 px-4 sm:px-6 lg:px-8">
             <div className="max-w-4xl mx-auto">
                 <div className="text-center mb-12">
-                    <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl mb-4">
+                    <h1 className="text-3xl font-bold tracking-tight text-foreground sm:text-5xl mb-4">
                         Privacy Policy
                     </h1>
-                    <p className="text-lg text-muted-foreground">
-                        Last Updated: June 29, 2025
+                    <p className="text-md text-muted-foreground">
+                        Last Updated: June 1, 2025
                     </p>
                 </div>
 
-                <div className="space-y-8">
+                <div className="space-y-8 p-1">
                     <Card className="border-border/50 shadow-sm">
                         <CardHeader>
-                            <CardTitle className="text-2xl">1. Information We Collect</CardTitle>
+                            <CardTitle className="text-xl">1. Information We Collect</CardTitle>
                             <CardDescription className="text-base">
                                 We collect various types of information to provide and improve our service to you.
                             </CardDescription>
@@ -39,7 +39,7 @@ export default function Privacy() {
 
                     <Card className="border-border/50 shadow-sm">
                         <CardHeader>
-                            <CardTitle className="text-2xl">2. How We Use Your Data</CardTitle>
+                            <CardTitle className="text-xl">2. How We Use Your Data</CardTitle>
                             <CardDescription className="text-base">
                                 Your information helps us provide and improve our services.
                             </CardDescription>
@@ -76,7 +76,7 @@ export default function Privacy() {
 
                     <Card className="border-border/50 shadow-sm">
                         <CardHeader>
-                            <CardTitle className="text-2xl">3. Data Protection</CardTitle>
+                            <CardTitle className="text-xl">3. Data Protection</CardTitle>
                             <CardDescription className="text-base">
                                 We take your privacy and data security seriously.
                             </CardDescription>
@@ -105,7 +105,7 @@ export default function Privacy() {
 
                     <Card className="border-border/50 shadow-sm">
                         <CardHeader>
-                            <CardTitle className="text-2xl">Contact Us</CardTitle>
+                            <CardTitle className="text-xl">Contact Us</CardTitle>
                             <CardDescription className="text-base">
                                 Have questions about our privacy policy?
                             </CardDescription>

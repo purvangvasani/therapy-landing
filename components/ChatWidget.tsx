@@ -33,7 +33,7 @@ export default function ChatWidget() {
         setIsTyping(true);
 
         try {
-            const res = await fetch("http://localhost:5001/chatbot", {
+            const res = await fetch("https://therapy-ai-server-572ae7a8d7fb.herokuapp.com/chatbot", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ message: input }),

@@ -89,17 +89,17 @@ export function AnimatedListDemo({
     return (
         <div
             className={cn(
-                "relative flex h-[500px] w-full flex-col overflow-hidden p-2",
+                "relative flex h-[500px] w-full flex-col overflow-hidden",
                 className,
             )}
         >
-                <span className="pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-gray-300/80 bg-clip-text text-center text-2xl sm:text-2xl md:text-4xl lg:text-6xl font-semibold leading-none text-transparent dark:from-white dark:to-slate-900/10 mb-6">
+                <span className="pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-gray-300/80 bg-clip-text text-center text-2xl sm:text-2xl md:text-4xl lg:text-6xl font-semibold leading-none text-transparent dark:from-white dark:to-slate-900/10 mb-4">
                     What Services We Provide
                 </span>
-                <span className="pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-gray-300/80 bg-clip-text text-center text-xl sm:text-xl md:text-xl lg:text-xl font-normal leading-none text-transparent dark:from-white dark:to-slate-900/10 mb-6">
+                <span className="pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-gray-300/80 bg-clip-text text-center text-md sm:text-md md:text-md lg:text-md font-normal leading-none text-transparent dark:from-white dark:to-slate-900/10 mb-4">
                     At MyTherapy, we offer supportive, judgment-free mental health conversations — anytime, anywhere.
                 </span>
-            <div className="flex flex-col items-center justify-center overflow-hidden mb-12">
+            <div className="flex flex-col items-center justify-center overflow-hidden mb-8">
             </div>
             <AnimatedList>
                 {notifications.map((item, idx) => (
