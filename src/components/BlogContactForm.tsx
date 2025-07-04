@@ -45,7 +45,7 @@ export function BlogContactForm() {
     return (
       <div className="p-6 bg-green-50 dark:bg-green-900/20 rounded-lg border border-green-200 dark:border-green-800">
         <h3 className="text-lg font-medium text-green-800 dark:text-green-200 mb-2">Thank you!</h3>
-        <p className="text-sm text-green-700 dark:text-green-300">Your message has been sent. We'll get back to you soon!</p>
+        <p className="text-sm text-green-700 dark:text-green-300">Your message has been sent. We&apos;ll get back to you soon!</p>
       </div>
     );
   }
@@ -54,7 +54,7 @@ export function BlogContactForm() {
     <Card className="p-6">
       <h3 className="text-lg font-medium">Have questions about this post?</h3>
       <p className="text-sm text-muted-foreground">
-        Send us a message and we'll get back to you as soon as possible.
+        Send us a message and we&apos;ll get back to you as soon as possible.
       </p>
       
       <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">

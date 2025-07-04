@@ -1,7 +1,5 @@
 'use client';
 
-import { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
 
 export interface BlogPost {
@@ -21,12 +19,6 @@ import { blogPosts } from './blog-data';
 
 // Blog component
 export default function Blog() {
-  const [expandedPost, setExpandedPost] = useState<string | null>(null);
-
-  const togglePost = (postId: string) => {
-    setExpandedPost(expandedPost === postId ? null : postId);
-  };
-
   const formatDate = (dateString: string) => {
     const options: Intl.DateTimeFormatOptions = { year: 'numeric', month: 'long', day: 'numeric' };
     return new Date(dateString).toLocaleDateString(undefined, options);
@@ -52,7 +44,7 @@ export default function Blog() {
               target="_blank" 
               rel="noopener noreferrer"
             >
-              Let's Connect
+              Let&apos;s Connect
             </a>
           </div>
         </div>

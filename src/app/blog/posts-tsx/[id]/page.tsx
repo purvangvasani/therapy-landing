@@ -1,7 +1,6 @@
 import { notFound } from 'next/navigation';
 import { blogPosts } from '../../blog-data';
 import type { BlogPost } from '../../BLOG';
-import BlogLayout from '../../BlogLayout';
 
 // Import the blog post components
 import MentalHealthAccess from '../mental-health-access';

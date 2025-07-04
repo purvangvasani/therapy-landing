@@ -5,7 +5,12 @@ import { blogPosts } from '../blog-data';
 import type { BlogPost } from '../BLOG';
 import { BlogContactForm } from '@/components/BlogContactForm';
 
-export default function BlogPostPage({ params }: { params: { id: string } }) {
+export default function BlogPostPage({
+  params,
+}: {
+  params: { id: string };
+  searchParams?: { [key: string]: string | string[] | undefined };
+}) {
   const post: BlogPost | undefined = blogPosts.find((post: BlogPost) => post.id === params.id);
 
   if (!post) {
@@ -94,8 +99,11 @@ export async function generateStaticParams() {
 }
 
 // Set the page title and description for better SEO
-export async function generateMetadata({ params }: { params: { id: string } }) {
-  const post: BlogPost | undefined = blogPosts.find((post: BlogPost) => post.id === params.id);
+export async function generateMetadata({ params }: { params: { id: string } }): Promise<{
+  title: string;
+  description: string;
+}> {
+  const post = blogPosts.find((post) => post.id === params.id);
   
   if (!post) {
     return {
@@ -105,7 +113,7 @@ export async function generateMetadata({ params }: { params: { id: string } }) {
   }
 
   return {
-    title: `${post.title} | MyTherapy Blog`,
-    description: post.excerpt,
+    title: `${post.title} | Therapy Blog`,
+    description: post.excerpt || 'Read more about mental health and wellness on our blog.',
   };
 }
