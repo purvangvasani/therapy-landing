@@ -1,20 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-
-export interface BlogPost {
-  id: string;
-  title: string;
-  date: string;
-  category: string;
-  imageUrl?: string;
-  author?: string;
-  readTime?: string;
-  excerpt?: string;
-  content: string;
-}
-
-// Import blog posts from the separate data file
+import Image from 'next/image';
 import { blogPosts } from './blog-data';
 
 // Blog component
@@ -59,11 +46,14 @@ export default function Blog() {
             className="block rounded-xl overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 shadow-sm hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 ease-in-out group"
           >
             {post.imageUrl && (
-              <div className="h-48 bg-gray-100 dark:bg-gray-700 overflow-hidden">
-                <img 
-                  src={post.imageUrl} 
+              <div className="relative h-48 bg-gray-100 dark:bg-gray-700 overflow-hidden">
+                <Image
+                  src={post.imageUrl}
                   alt={post.title}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  className="object-cover group-hover:scale-105 transition-transform duration-300"
+                  priority={false}
                 />
               </div>
             )}

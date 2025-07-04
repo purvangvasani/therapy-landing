@@ -1,8 +1,9 @@
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
+import Image from 'next/image';
 import { CalendarIcon } from '@radix-ui/react-icons';
 import { blogPosts } from '../blog-data';
-import type { BlogPost } from '../BLOG';
+import type { BlogPost } from '../types';
 import { BlogContactForm } from '@/components/BlogContactForm';
 
 export default function BlogPostPage({
@@ -51,11 +52,14 @@ export default function BlogPostPage({
         </header>
 
         {post.imageUrl && (
-          <div className="mb-8 rounded-xl overflow-hidden">
-            <img 
-              src={post.imageUrl} 
+          <div className="mb-8 rounded-xl overflow-hidden relative w-full h-96">
+            <Image
+              src={post.imageUrl}
               alt={post.title}
-              className="w-full h-auto max-h-96 object-cover"
+              fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 70vw, 50vw"
+              className="object-cover"
+              priority
             />
           </div>
         )}
