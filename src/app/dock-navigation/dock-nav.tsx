@@ -82,6 +82,11 @@ const DATA = {
                 url: "/faq",
                 icon: Icons.faq,
             },
+            "Blog": {
+                name: "Blog",
+                url: "/blog",
+                icon: Icons.scrollText,
+            },
             // "Terms & Conditions": {
             //     name: "Terms & Conditions",
             //     url: "/",
