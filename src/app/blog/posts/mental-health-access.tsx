@@ -1,6 +1,6 @@
 import React from 'react';
 import BlogLayout from '../../blog/BlogLayout';
-import type { BlogPost } from '../BLOG';
+import { BlogPost } from '../../blog/types';
 
 const post: BlogPost = {
     id: 'mental-health-access',

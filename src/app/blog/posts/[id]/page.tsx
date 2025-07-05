@@ -1,10 +1,10 @@
 import { notFound } from 'next/navigation';
 import { blogPosts } from '../../blog-data';
-import type { BlogPost } from '../../BLOG';
 
 // Import the blog post components
 import MentalHealthAccess from '../mental-health-access';
 import EmotionalBurnout from '../emotional-burnout';
+import { BlogPost } from '../../types';
 
 // Map of post IDs to their corresponding components
 const postComponents: Record<string, React.ComponentType> = {

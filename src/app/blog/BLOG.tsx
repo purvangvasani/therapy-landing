@@ -42,7 +42,7 @@ export default function Blog() {
         {blogPosts.map((post) => (
           <Link 
             key={post.id}
-            href={`/blog/posts-tsx/${post.id}`}
+            href={`/blog/posts/${post.id}`}
             className="block rounded-xl overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 shadow-sm hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 ease-in-out group"
           >
             {post.imageUrl && (
